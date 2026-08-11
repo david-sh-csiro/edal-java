@@ -1,4 +1,4 @@
-FROM maven:3.3.9-jdk-8
+FROM maven:3.9.16
 MAINTAINER Jesse Lopez <jesse@axiomdatascience.com>
 
 # Copy app
