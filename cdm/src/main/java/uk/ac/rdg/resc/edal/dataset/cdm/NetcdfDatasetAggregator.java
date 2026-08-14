@@ -54,6 +54,7 @@ import ucar.nc2.NetcdfFiles;
 import ucar.nc2.Variable;
 import ucar.nc2.dataset.DatasetUrl;
 import ucar.nc2.dataset.NetcdfDataset;
+import ucar.nc2.dataset.NetcdfDatasets;
 import ucar.nc2.ft.fmrc.Fmrc;
 import ucar.nc2.ncml.NcMLReader;
 import ucar.nc2.units.DateUnit;
@@ -657,7 +658,7 @@ public class NetcdfDatasetAggregator {
                             : ServiceType.NCML;
                     nc = NetcdfDataset.acquireDataset(new DatasetUrl(serviceType, location), null);
                 } else {
-                    nc = NetcdfDataset.openDataset(location);
+                    nc = NetcdfDatasets.openDataset(location);
                 }
             }
         } catch (IOException e) {
