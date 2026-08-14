@@ -34,6 +34,11 @@
         </dependency>
         <dependency>
             <groupId>edu.ucar</groupId>
+            <artifactId>libblosc2-jna</artifactId>
+            <version>${netcdfversion}</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.ucar</groupId>
             <artifactId>udunits</artifactId>
             <version>${netcdfversion}</version>
         </dependency>
