@@ -50,6 +50,7 @@ import thredds.client.catalog.ServiceType;
 import ucar.nc2.Attribute;
 import ucar.nc2.Dimension;
 import ucar.nc2.NetcdfFile;
+import ucar.nc2.NetcdfFiles;
 import ucar.nc2.Variable;
 import ucar.nc2.dataset.DatasetUrl;
 import ucar.nc2.dataset.NetcdfDataset;
@@ -297,7 +298,7 @@ public class NetcdfDatasetAggregator {
                         for (File file : files) {
                             NetcdfFile ncFile = null;
                             try {
-                                ncFile = NetcdfFile.open(file.getAbsolutePath());
+                                ncFile = NetcdfFiles.open(file.getAbsolutePath());
                                 Variable timeVar = ncFile.findVariable(timeDimName);
                                 String unitsString = timeVar.findAttribute("units")
                                         .getStringValue();
